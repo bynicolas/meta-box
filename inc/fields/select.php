@@ -14,6 +14,7 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 		static function admin_enqueue_scripts()
 		{
 			wp_enqueue_style( 'rwmb-select', RWMB_CSS_URL . 'select.css', array(), RWMB_VER );
+			wp_enqueue_script( 'rwmb-select', RWMB_JS_URL . 'select.js', array(), RWMB_VER, true );
 		}
 
 		/**
@@ -37,6 +38,8 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 			$html .= self::options_html( $field, $meta );
 
 			$html .= '</select>';
+
+			$html .= self::get_select_all_html( $field['multiple'] );
 
 			return $html;
 		}
@@ -102,9 +105,9 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 			$html = '';
 			if ( $field['placeholder'] )
 			{
-				$show_placeholder = ( 'select' == $field['type'] ) // Normal select field
-					|| ( isset( $field['field_type'] ) && 'select' == $field['field_type'] ) // For 'post' field
-					|| ( isset( $field['display_type'] ) && 'select' == $field['display_type'] ); // For 'taxonomy' field
+				$show_placeholder = ( 'select' === $field['type'] ) // Normal select field
+					|| ( isset( $field['field_type'] ) && 'select' === $field['field_type'] ) // For 'post' field
+					|| ( isset( $field['display_type'] ) && 'select' === $field['display_type'] ); // For 'taxonomy' field
 				$html             = $show_placeholder ? "<option value=''>{$field['placeholder']}</option>" : '<option></option>';
 			}
 
@@ -190,6 +193,24 @@ if ( ! class_exists( 'RWMB_Select_Field' ) )
 		static function get_option_label( &$value, $index, $field )
 		{
 			$value = $field['options'][$value];
+		}
+
+		/**
+		 * Get html for select all|none for multiple select
+		 *
+		 * @param $multiple
+		 *
+		 * @return string
+		 */
+		static function get_select_all_html( $multiple )
+		{
+			if ( $multiple === true )
+			{
+				return '<div class="checkbox rwmb-select-all">
+						' . __( 'Select', 'meta-box' ) . ': <a class="select-all" href="javascript:;">' . __( 'All', 'meta-box' ) . '</a> | <a class="select-none" href="javascript:;">' . __( 'None', 'meta-box' ) . '</a>
+					</div>';
+			}
+			return '';
 		}
 	}
 }

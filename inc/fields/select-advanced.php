@@ -39,12 +39,14 @@ if ( ! class_exists( 'RWMB_Select_Advanced_Field' ) )
 				$field['id'],
 				$field['size'],
 				$field['multiple'] ? ' multiple' : '',
-				esc_attr( json_encode( $field['js_options'] ) )
+				esc_attr( wp_json_encode( $field['js_options'] ) )
 			);
 
 			$html .= self::options_html( $field, $meta );
 
 			$html .= '</select>';
+
+			$html .= self::get_select_all_html( $field['multiple'] );
 
 			return $html;
 		}

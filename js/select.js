@@ -8,7 +8,7 @@ jQuery( function ( $ )
 	function selectToggle( inputWrapper )
 	{
 		var $link = $( '.rwmb-select-all a', inputWrapper ),
-			$element = $( '.rwmb-select-advanced', inputWrapper );
+			$element = $( '.rwmb-select', inputWrapper );
 
 		$link.click( function()
 		{
@@ -26,11 +26,11 @@ jQuery( function ( $ )
 						selected[selected.length] = $value;
 					}
 				} );
-				$element.select2( 'val', selected );
+				$element.val( selected );
 			}
 			else
 			{
-				$element.select2( "val", "" );
+				$element.val('');
 			}
 		} );
 	}
@@ -64,14 +64,9 @@ jQuery( function ( $ )
 	 */
 	function update()
 	{
-		var $this = $( this ),
-			options = $this.data( 'options' );
-		$this.siblings( '.select2-container' ).remove();
-		$this.show().select2( options );
-
-		bindSelectAllEvent( $this );
+		bindSelectAllEvent( $(this) );
 	}
 
-	$( ':input.rwmb-select-advanced' ).each( update );
-	$( '.rwmb-input' ).on( 'clone', ':input.rwmb-select-advanced', update );
+	$( ':input.rwmb-select' ).each( update );
+	$( '.rwmb-input' ).on( 'clone', ':input.rwmb-select', update );
 } );
