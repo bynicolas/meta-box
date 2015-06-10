@@ -1,6 +1,9 @@
 # Meta Box WordPress Plugin
 
 [![Build Status](https://travis-ci.org/rilwis/meta-box.svg?branch=master)](https://travis-ci.org/rilwis/meta-box)
+[![Total Downloads](https://img.shields.io/wordpress/plugin/dt/meta-box.svg)](http://wordpress.org/plugins/meta-box/)
+[![WordPress](https://img.shields.io/wordpress/v/meta-box.svg)](http://wordpress.org/plugins/meta-box/)
+[![License](https://img.shields.io/packagist/l/rilwis/meta-box.svg)](http://metabox.io)
 
 **Plugin Links**
 
@@ -69,7 +72,22 @@ To getting started with the plugin API, please read [this tutorial](http://metab
 
 ***
 
+### [![phpstorm](https://www.jetbrains.com/phpstorm/documentation/docs/logo_phpstorm.png)](https://www.jetbrains.com/phpstorm/)
+
+***
+
 ## Changelog
+
+#### 4.5.3
+* Improvement: Use `wp_json_encode` instead of `json_encode`. Thank Sam Ford.
+* Fix: Escape value for cloneable fields
+* Fix: Notice for missing parameters for `rwmb_meta` field for `map`
+
+#### 4.5.2
+* Improvement: Add Persian (Farsi) language. Thank Ahmad Azimi.
+* Improvement: Update Spanish translation. Thank David Perez.
+* Fix: Cloning text fields
+* Fix: rwmb_meta works incorrectly for image fields if multiple=false
 
 #### 4.5.1
 * Improvement: Add ability to use multiple post types for `post` field

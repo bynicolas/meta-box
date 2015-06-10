@@ -65,10 +65,12 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 			// Cloneable fields
 			if ( $field['clone'] )
 			{
-				$meta = (array) $meta;
-
 				$field_html = '';
 
+				/**
+				 * Note: $meta must contain value so that the foreach loop runs!
+				 * @see self::meta()
+				 */
 				foreach ( $meta as $index => $sub_meta )
 				{
 					$sub_field               = $field;
@@ -84,6 +86,10 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 
 					// Wrap field HTML in a div with class="rwmb-clone" if needed
 					$input_html = '<div class="rwmb-clone">';
+
+					// Drag clone icon
+					if ( isset( $field['sort_clone'] ) && $field['sort_clone'] )
+						$input_html .= "<a href='javascript:;' class='drag-clone'></a>";
 
 					// Call separated methods for displaying each type of field
 					$input_html .= call_user_func( array( $field_class, 'html' ), $sub_meta, $sub_field );
@@ -183,16 +189,26 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 		 */
 		static function begin_html( $meta, $field )
 		{
+			$data = '';
+			if ( isset( $field['max_clone'] ) && is_numeric( $field['max_clone'] ) && $field['max_clone'] > 1 )
+			{
+				$data .= 'data-max-clone=' . $field['max_clone'];
+			}
+
 			if ( empty( $field['name'] ) )
-				return '<div class="rwmb-input">';
+				return sprintf(
+					'<div class="rwmb-input" %s>',
+					$data
+				);
 
 			return sprintf(
 				'<div class="rwmb-label">
 					<label for="%s">%s</label>
 				</div>
-				<div class="rwmb-input">',
+				<div class="rwmb-input" %s>',
 				$field['id'],
-				$field['name']
+				$field['name'],
+				$data
 			);
 		}
 
@@ -271,7 +287,15 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 			// Make sure meta value is an array for clonable and multiple fields
 			if ( $field['clone'] || $field['multiple'] )
 			{
-				$meta = (array) $meta;
+				if ( empty( $meta ) || ! is_array( $meta ) )
+				{
+					/**
+					 * Note: if field is clonable, $meta must be an array with values
+					 * so that the foreach loop in self::show() runs properly
+					 * @see self::show()
+					 */
+					$meta = $field['clone'] ? array( '' ) : array();
+				}
 			}
 
 			return $meta;
@@ -286,12 +310,7 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 		 */
 		static function esc_meta( $meta )
 		{
-			if ( is_array( $meta ) )
-			{
-				array_walk_recursive( $meta, 'esc_attr' );
-				return $meta;
-			}
-			return esc_attr( $meta );
+			return is_array( $meta ) ? array_map( __METHOD__, $meta ) : esc_attr( $meta );
 		}
 
 		/**
@@ -412,7 +431,7 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 				// Make sure meta value is an array for clonable and multiple fields
 				if ( $field['clone'] || $field['multiple'] )
 				{
-					$value = (array) $value;
+					$value = is_array( $value ) && $value ? $value : array();
 				}
 			}
 
