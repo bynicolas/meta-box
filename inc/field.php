@@ -88,8 +88,8 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 					$input_html = '<div class="rwmb-clone">';
 
 					// Drag clone icon
-					if ( isset( $field['sort_clone'] ) && $field['sort_clone'] )
-						$input_html .= "<a href='javascript:;' class='drag-clone'></a>";
+					if ( $field['sort_clone'] )
+						$input_html .= "<a href='javascript:;' class='rwmb-clone-icon'></a>";
 
 					// Call separated methods for displaying each type of field
 					$input_html .= call_user_func( array( $field_class, 'html' ), $sub_meta, $sub_field );
@@ -189,27 +189,28 @@ if ( ! class_exists( 'RWMB_Field ' ) )
 		 */
 		static function begin_html( $meta, $field )
 		{
-			$data = '';
-			if ( isset( $field['max_clone'] ) && is_numeric( $field['max_clone'] ) && $field['max_clone'] > 1 )
+			$field_label = '';
+			if ( $field['name'] )
 			{
-				$data .= 'data-max-clone=' . $field['max_clone'];
+				$field_label = sprintf(
+					'<div class="rwmb-label"><label for="%s">%s</label></div>',
+					$field['id'],
+					$field['name']
+				);
 			}
 
-			if ( empty( $field['name'] ) )
-				return sprintf(
-					'<div class="rwmb-input" %s>',
-					$data
-				);
+			$data_max_clone = '';
+			if ( is_numeric( $field['max_clone'] ) && $field['max_clone'] > 1 )
+			{
+				$data_max_clone .= ' data-max-clone=' . $field['max_clone'];
+			}
 
-			return sprintf(
-				'<div class="rwmb-label">
-					<label for="%s">%s</label>
-				</div>
-				<div class="rwmb-input" %s>',
-				$field['id'],
-				$field['name'],
-				$data
+			$input_open = sprintf(
+				'<div class="rwmb-input"%s>',
+				$data_max_clone
 			);
+
+			return $field_label . $input_open;
 		}
 
 		/**
