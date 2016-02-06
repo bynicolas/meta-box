@@ -2,410 +2,383 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Meta Box Script For WordPress\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-03 22:18+0700\n"
-"PO-Revision-Date: 2013-06-03 22:19+0700\n"
-"Last-Translator: Rilwis <rilwis@gmail.com>\n"
+"POT-Creation-Date: 2013-06-03 22:19+0700\n"
+"PO-Revision-Date: 2013-11-25 12:07+0800\n"
+"Last-Translator: Amos Lee <iwillhappy1314@gmail.com>\n"
 "Language-Team: Rilwis <rilwis@gmail.com>\n"
-"Language: en_VN\n"
+"Language: en_EN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;_n:1,2;_n_noop:1,2;_nx:1,2;"
 "_nx_noop:1,2\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPath-1: ../inc/fields\n"
 
 #: ../demo/all-custom-post-types.php:20
 msgid "Personal Information"
-msgstr ""
+msgstr "个人信息"
 
 #: ../demo/all-custom-post-types.php:25
 msgid "Full name"
-msgstr ""
+msgstr "全名"
 
 #: ../demo/better-include.php:16 ../demo/include-by-ID-or-page-template.php:8
 msgid "Meta Box Title"
-msgstr ""
+msgstr "元数据盒子标题"
 
 #: ../demo/better-include.php:19 ../demo/include-by-ID-or-page-template.php:14
 msgid "Your images"
-msgstr ""
+msgstr "你的图片"
 
 #: ../demo/date-time-js-options.php:11
 msgid "Date Time Picker With JS Options"
-msgstr ""
+msgstr "日期时间选择"
 
 #: ../demo/date-time-js-options.php:15
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: ../demo/date-time-js-options.php:21 ../demo/demo.php:177
 msgid "(yyyy-mm-dd)"
-msgstr ""
+msgstr "(yyyy-mm-dd)"
 
 #: ../demo/date-time-js-options.php:23
 msgid "Select Date"
-msgstr "Chọn ngày"
+msgstr "选择日期"
 
 #: ../demo/date-time-js-options.php:24 ../demo/demo.php:178
 msgid "yy-mm-dd"
-msgstr ""
+msgstr "yy-mm-dd"
 
 #: ../demo/date-time-js-options.php:30
 msgid "Datetime"
-msgstr ""
+msgstr "日期时间"
 
 #: ../demo/date-time-js-options.php:41
 msgid "Time"
-msgstr ""
+msgstr "时间"
 
 #: ../demo/demo.php:34
 msgid "Standard Fields"
-msgstr ""
+msgstr "标准字段"
 
 #: ../demo/demo.php:53
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
 #: ../demo/demo.php:57
 msgid "Text description"
-msgstr ""
+msgstr "文本描述"
 
 #: ../demo/demo.php:60
 msgid "Default text value"
-msgstr "Giá trị text mặc định"
+msgstr "默认文本值"
 
 #: ../demo/demo.php:66
 msgid "Checkbox"
-msgstr ""
+msgstr "多选"
 
 #: ../demo/demo.php:74
 msgid "Radio"
-msgstr ""
+msgstr "单选"
 
 #: ../demo/demo.php:80 ../demo/demo.php:91 ../demo/demo.php:226
 msgid "Label1"
-msgstr ""
+msgstr "标签1"
 
 #: ../demo/demo.php:81 ../demo/demo.php:92 ../demo/demo.php:227
 msgid "Label2"
-msgstr ""
+msgstr "标签1"
 
 #: ../demo/demo.php:86
 msgid "Select"
-msgstr "Chọn"
+msgstr "选择"
 
 #: ../demo/demo.php:96
 msgid "Select an Item"
-msgstr "Chọn một giá trị"
+msgstr "选择一项"
 
 #: ../demo/demo.php:103
 msgid "Hidden value"
-msgstr ""
+msgstr "隐藏值"
 
 #: ../demo/demo.php:107
 msgid "Password"
-msgstr ""
+msgstr "米秒"
 
 #: ../demo/demo.php:113
 msgid "Textarea"
-msgstr ""
+msgstr "文本段落"
 
 #: ../demo/demo.php:114
 msgid "Textarea description"
-msgstr ""
+msgstr "段落描述"
 
 #: ../demo/demo.php:131
 msgid "Password is required"
-msgstr ""
+msgstr "密码为必填项"
 
 #: ../demo/demo.php:132
 msgid "Password must be at least 7 characters"
-msgstr ""
+msgstr "密码至少为7个字符"
 
 #: ../demo/demo.php:140
 msgid "Advanced Fields"
-msgstr ""
+msgstr "高级字段"
 
 #: ../demo/demo.php:145
 msgid "Slider"
-msgstr ""
+msgstr "滑块"
 
 #: ../demo/demo.php:150
 msgid "$"
-msgstr ""
+msgstr "$"
 
 #: ../demo/demo.php:151
 msgid " USD"
-msgstr ""
+msgstr "USD"
 
 #: ../demo/demo.php:162
 msgid "Number"
-msgstr ""
+msgstr "数字"
 
 #: ../demo/demo.php:171
 msgid "Date picker"
-msgstr ""
+msgstr "日期选择器"
 
 #: ../demo/demo.php:186
 msgid "Datetime picker"
-msgstr ""
+msgstr "日期时间选择器"
 
 #: ../demo/demo.php:200
 msgid "Time picker"
-msgstr ""
+msgstr "时间选择器"
 
 #: ../demo/demo.php:215
 msgid "Color picker"
-msgstr ""
+msgstr "颜色选择器"
 
 #: ../demo/demo.php:221
 msgid "Checkbox list"
-msgstr ""
+msgstr "选择列表"
 
 #: ../demo/demo.php:232
 msgid "Email"
-msgstr ""
+msgstr "邮件"
 
 #: ../demo/demo.php:234
 msgid "Email description"
-msgstr ""
+msgstr "邮件描述"
 
 #: ../demo/demo.php:240
 msgid "Range"
-msgstr ""
+msgstr "区间"
 
 #: ../demo/demo.php:242
 msgid "Range description"
-msgstr ""
+msgstr "区间描述"
 
 #: ../demo/demo.php:251
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../demo/demo.php:253
 msgid "URL description"
-msgstr ""
+msgstr "URL描述"
 
 #: ../demo/demo.php:259
 msgid "oEmbed"
-msgstr ""
+msgstr "oEmbed嵌入"
 
 #: ../demo/demo.php:261
 msgid "oEmbed description"
-msgstr ""
+msgstr "oEmbed嵌入描述"
 
 #: ../demo/demo.php:266
 msgid "Taxonomy"
-msgstr ""
+msgstr "分类法"
 
 #: ../demo/demo.php:280
 msgid "Posts (Pages)"
-msgstr ""
+msgstr "文章（页面）"
 
 #: ../demo/demo.php:296
 msgid "WYSIWYG / Rich Text Editor"
-msgstr ""
+msgstr "可视化编辑器"
 
 #: ../demo/demo.php:301
 msgid "WYSIWYG default value"
-msgstr ""
+msgstr "可视化编辑器默认值"
 
 #: ../demo/demo.php:312 ../demo/force-delete.php:15
 msgid "File Upload"
-msgstr ""
+msgstr "文件上传"
 
 #: ../demo/demo.php:318
 msgid "File Advanced Upload"
-msgstr ""
+msgstr "高级文件上传"
 
 #: ../demo/demo.php:326 ../demo/force-delete.php:22
 msgid "Image Upload"
-msgstr ""
+msgstr "图片上选"
 
 #: ../demo/demo.php:332 ../demo/force-delete.php:28
 msgid "Thickbox Image Upload"
-msgstr ""
+msgstr "默认上传"
 
 #: ../demo/demo.php:338 ../demo/force-delete.php:35
-#, fuzzy
 msgid "Plupload Image Upload"
-msgstr "Tải file"
+msgstr "拖拽上传"
 
 #: ../demo/demo.php:345
 msgid "Image Advanced Upload"
-msgstr ""
+msgstr "图片高级上传"
 
 #: ../demo/force-delete.php:11
 msgid "Test Meta Box"
-msgstr ""
+msgstr "测试元数据盒子"
 
 #: ../demo/map.php:9
 msgid "Google Map"
-msgstr ""
+msgstr "谷歌地图"
 
 #: ../demo/map.php:13
 msgid "Address"
-msgstr "Địa chỉ"
+msgstr "地址"
 
 #: ../demo/map.php:15
 msgid "Hanoi, Vietnam"
-msgstr ""
+msgstr "河南，郑州"
 
 #: ../demo/map.php:19
 msgid "Location"
-msgstr "Địa điểm"
+msgstr "位置"
 
 #: ../inc/classes/meta-box.php:220
 msgid "Please correct the errors highlighted below and try again."
-msgstr "Vui lòng sửa các lỗi dưới đây và thử lại"
+msgstr "请检查并修正高亮错误处，然后重试 。"
 
 #: ../inc/classes/meta-box.php:394
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: ../inc/classes/meta-box.php:416
 msgid "&#8211;"
-msgstr ""
+msgstr "&#8211;"
 
-#: ../inc/fields/file-advanced.php:23
+#: ../inc/fields/file-advanced.php:23H
 #, php-format
 msgid "You may only upload maximum %d file"
-msgstr "Bạn chỉ được phép upload tối đa %d file"
+msgstr "最多能上传%d 个文件"
 
 #: ../inc/fields/file-advanced.php:24
 #, php-format
 msgid "You may only upload maximum %d files"
-msgstr "Bạn chỉ được phép upload tối đa %d file"
+msgstr "最多能上传%d 个文件"
 
 #: ../inc/fields/file-advanced.php:25
-#, fuzzy
 msgid "Select Files"
-msgstr "Chọn file"
+msgstr "选择文件"
 
 #: ../inc/fields/file-advanced.php:68
-#, fuzzy
 msgctxt "file upload"
 msgid "Select or Upload Files"
-msgstr "Chọn hoặc tải file"
+msgstr "选择或上传文件"
 
 #: ../inc/fields/file-advanced.php:104 ../inc/fields/file.php:133
 msgctxt "file upload"
 msgid "Delete"
-msgstr "Xóa"
+msgstr "删除【上传文件】"
 
 #: ../inc/fields/file-advanced.php:105 ../inc/fields/file.php:134
 msgctxt "file upload"
 msgid "Edit"
-msgstr "Sửa"
+msgstr "编辑【上传文件】"
 
 #: ../inc/fields/file.php:66
 msgid "Error: Cannot delete file"
-msgstr "Lỗi: Không xóa được file"
+msgstr "错误：不能删除文件"
 
 #: ../inc/fields/file.php:80
 msgctxt "file upload"
 msgid "Upload Files"
-msgstr "Tải file"
+msgstr "上传文件"
 
 #: ../inc/fields/file.php:81
 msgctxt "file upload"
 msgid "+ Add new file"
-msgstr "+ Thêm file mới"
+msgstr "+ 添加新文件"
 
 #: ../inc/fields/image-advanced.php:22
 msgid "Select Images"
-msgstr "Chọn hình ảnh"
+msgstr "选择图片"
 
 #: ../inc/fields/image-advanced.php:71
 msgctxt "image upload"
 msgid "Select or Upload Images"
-msgstr "Chọn hoặc tải file"
+msgstr "选择或上传图片"
 
 #: ../inc/fields/image-advanced.php:107 ../inc/fields/image.php:144
 msgctxt "image upload"
 msgid "Delete"
-msgstr "Xóa"
+msgstr "删除"
 
 #: ../inc/fields/image-advanced.php:108 ../inc/fields/image.php:145
 msgctxt "image upload"
 msgid "Edit"
-msgstr "Sửa"
+msgstr "编辑"
 
 #: ../inc/fields/image.php:64
 msgid "Order saved"
-msgstr "Đã lưu thứ tự"
+msgstr "排序已保存"
 
 #: ../inc/fields/image.php:78 ../inc/fields/thickbox-image.php:35
 msgctxt "image upload"
 msgid "Upload Images"
-msgstr "Tải file"
+msgstr "上传图像"
 
 #: ../inc/fields/image.php:79
 msgctxt "image upload"
 msgid "+ Add new image"
-msgstr "+ Thêm hình mới"
+msgstr "+ 添加新图像"
 
 #: ../inc/fields/map.php:48
 msgid "Find Address"
-msgstr "Tìm địa chỉ"
+msgstr "查找地址"
 
 #: ../inc/fields/plupload-image.php:104
 msgctxt "image upload"
 msgid "Drop images here"
-msgstr "Kéo thả hình ảnh vào đây"
+msgstr "拖放图像到这里"
 
 #: ../inc/fields/plupload-image.php:105
 msgctxt "image upload"
 msgid "or"
-msgstr "hoặc"
+msgstr "或"
 
 #: ../inc/fields/plupload-image.php:106
 msgctxt "image upload"
 msgid "Select Files"
-msgstr "Chọn file"
+msgstr "选择文件"
 
 #: ../inc/fields/plupload-image.php:181
 msgctxt "image upload"
 msgid "Allowed Image Files"
-msgstr "Các file hình ảnh được cho phép"
+msgstr "选择图像文件"
 
 #: ../inc/fields/post.php:54
 msgid "Post"
-msgstr "Bài viết"
+msgstr "文章"
 
 #: ../inc/fields/post.php:68 ../inc/fields/taxonomy.php:40
 #, php-format
 msgid "Select a %s"
-msgstr "Chọn %s"
+msgstr "选择%s"
 
 #: ../inc/fields/select-advanced.php:71
 msgid "Select a value"
-msgstr "Chọn một màu"
-
-#~ msgctxt "file upload"
-#~ msgid "Uploaded files"
-#~ msgstr "Các file đã tải lên"
-
-#~ msgctxt "file upload"
-#~ msgid "Delete this file"
-#~ msgstr "Xóa file"
-
-#~ msgctxt "image upload"
-#~ msgid "Uploaded files"
-#~ msgstr "Các file đã tải lên"
-
-#~ msgctxt "image upload"
-#~ msgid "Delete this file"
-#~ msgstr "Xóa file"
-
-#~ msgctxt "image upload"
-#~ msgid "Upload files"
-#~ msgstr "Tải file"
-
-#~ msgctxt "image upload"
-#~ msgid "Add another file"
-#~ msgstr "Thêm file mới"
+msgstr "选择值"
