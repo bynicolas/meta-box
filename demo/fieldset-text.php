@@ -4,8 +4,7 @@
  */
 
 add_filter( 'rwmb_meta_boxes', 'your_prefix_fieldset_text_demo' );
-function your_prefix_fieldset_text_demo( $meta_boxes )
-{
+function your_prefix_fieldset_text_demo( $meta_boxes ) {
 	$meta_boxes[] = array(
 		'title'  => __( 'Fieldset Text Demo', 'your-prefix' ),
 		'fields' => array(
@@ -15,9 +14,6 @@ function your_prefix_fieldset_text_demo( $meta_boxes )
 				'type'    => 'fieldset_text',
 
 				'desc'    => __( 'Please enter following details:', 'your-prefix' ),
-
-				// Number of rows
-				'rows'    => 3,
 
 				// Options: array of Label => key for text boxes
 				// Note: key is used as key of array of values stored in the database
