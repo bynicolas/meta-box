@@ -1,8 +1,7 @@
 <?php
 add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
 
-function your_prefix_register_meta_boxes( $meta_boxes )
-{
+function your_prefix_register_meta_boxes( $meta_boxes ) {
 	$prefix = 'your_prefix_';
 	$meta_boxes[] = array(
 		'title' => __( 'Date Time Picker With JS Options', 'your-prefix' ),
@@ -22,6 +21,22 @@ function your_prefix_register_meta_boxes( $meta_boxes )
 					'numberOfMonths'  => 2,
 					'showButtonPanel' => true,
 				),
+			),
+			array(
+				'name' => __( 'Inline Date', 'your-prefix' ),
+				'id'   => $prefix . 'inline-date',
+				'type' => 'date',
+
+				// jQuery date picker options. See here http://jqueryui.com/demos/datepicker
+				'js_options' => array(
+					'appendText'      => __( '(yyyy-mm-dd)', 'your-prefix' ),
+					'autoSize'        => true,
+					'buttonText'      => __( 'Select Date', 'your-prefix' ),
+					'dateFormat'      => __( 'yy-mm-dd', 'your-prefix' ),
+					'numberOfMonths'  => 2,
+					'showButtonPanel' => true,
+				),
+				'inline' => true,
 			),
 			array(
 				'name' => __( 'Datetime', 'your-prefix' ),

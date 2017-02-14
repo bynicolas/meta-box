@@ -1,75 +1,63 @@
 <?php
 /**
+ * The user select field.
+ *
+ * @package Meta Box
+ */
+
+/**
  * User field class.
  */
-class RWMB_User_Field extends RWMB_Object_Choice_Field
-{
+class RWMB_User_Field extends RWMB_Object_Choice_Field {
 	/**
-	 * Normalize parameters for field
+	 * Normalize parameters for field.
 	 *
-	 * @param array $field
+	 * @param array $field Field parameters.
 	 *
 	 * @return array
 	 */
-	static function normalize( $field )
-	{
-		/**
-		 * Set default field args
-		 */
-		$field = wp_parse_args( $field, array(
-			'field_type' => 'select',
-			'query_args' => array(),
-		) );
+	public static function normalize( $field ) {
+		// Set default field args.
+		$field = parent::normalize( $field );
 
-		/**
-		 * Prevent select tree for user since it's not hierarchical
-		 */
+		// Prevent select tree for user since it's not hierarchical.
 		$field['field_type'] = 'select_tree' === $field['field_type'] ? 'select' : $field['field_type'];
 
-		/**
-		 * Set to always flat
-		 */
+		// Set to always flat.
 		$field['flatten'] = true;
 
-		/**
-		 * Set default placeholder
-		 */
+		// Set default placeholder.
 		$field['placeholder'] = empty( $field['placeholder'] ) ? __( 'Select an user', 'meta-box' ) : $field['placeholder'];
 
-		/**
-		 * Set default query args
-		 */
+		// Set default query args.
 		$field['query_args'] = wp_parse_args( $field['query_args'], array(
 			'orderby' => 'display_name',
 			'order'   => 'asc',
 			'role'    => '',
 			'fields'  => 'all',
 		) );
-		$field               = parent::normalize( $field );
 
 		return $field;
 	}
 
 	/**
-	 * Get users
+	 * Get users.
 	 *
-	 * @param array $field
+	 * @param array $field Field parameters.
 	 *
 	 * @return array
 	 */
-	static function get_options( $field )
-	{
-		$options = get_users( $field['query_args'] );
-		return $options;
+	public static function get_options( $field ) {
+		$query = new WP_User_Query( $field['query_args'] );
+		return $query->get_results();
 	}
 
 	/**
-	 * Get field names of object to be used by walker
+	 * Get field names of object to be used by walker.
 	 *
 	 * @return array
 	 */
-	static function get_db_fields()
-	{
+	public static function get_db_fields() {
 		return array(
 			'parent' => 'parent',
 			'id'     => 'ID',
@@ -78,17 +66,15 @@ class RWMB_User_Field extends RWMB_Object_Choice_Field
 	}
 
 	/**
-	 * Get option label to display in the frontend
+	 * Get option label.
 	 *
-	 * @param int   $value Option value
-	 * @param int   $index Array index
-	 * @param array $field Field parameter
+	 * @param array  $field Field parameters.
+	 * @param string $value Option value.
 	 *
 	 * @return string
 	 */
-	static function get_option_label( &$value, $index, $field )
-	{
+	public static function get_option_label( $field, $value ) {
 		$user  = get_userdata( $value );
-		$value = '<a href="' . get_author_posts_url( $value ) . '">' . $user->display_name . '</a>';
+		return '<a href="' . get_author_posts_url( $value ) . '">' . $user->display_name . '</a>';
 	}
 }
